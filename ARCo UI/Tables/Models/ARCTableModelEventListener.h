@@ -1,0 +1,22 @@
+//
+//  LRTableViewModelEventListener.h
+//  TableViewModel
+//
+//  Created by Luke Redpath on 09/08/2010.
+//  Copyright 2010 LJR Software Limited. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "ARCTableModelEvent.h"
+
+
+
+@protocol ARCTableModelEventListener
+
+- (void)tableModelChanged:(ARCTableModelEvent *)changeEvent;
+
+@optional
+- (void)tableModelWillBeginUpdates;
+- (void)tableModelDidEndUpdates;
+
+@end
